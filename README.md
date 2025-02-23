@@ -1,50 +1,74 @@
-# Welcome to your Expo app 👋
+E-commerce Mini App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is a simple E-commerce Mini App built using React Native and Expo. The app allows users to browse products, add them to a cart, and proceed to checkout. It also includes a payment page for completing the purchase.
 
-## Get started
+Features
+   Product Listing: Displays a list of products fetched from an API.
+   
+   Product Details: Shows detailed information about a selected product.
+   
+   Shopping Cart: Allows users to add/remove products and view the total price.
+   
+   Payment Page: Simulates a payment process.
+   
+   Filtering: Users can filter products by category and price range.
 
-1. Install dependencies
-
-   ```bash
+Setup Instructions
+   Prerequisites
+   Node.js installed on your machine.
+   
+   Expo CLI installed globally.
+   
+   Installation
+   Clone the repository
+   
+   
+   git clone https://github.com/Dilo1999/Online-Shoping.git
+   cd e-commerce-mini-app
+   Install dependencies
+   
+   
    npm install
-   ```
+   Start the development server
+   
+   
+   expo start
+   Run the app
 
-2. Start the app
+Use the Expo Go app on your mobile device to scan the QR code displayed in the terminal or browser.
 
-   ```bash
-    npx expo start
-   ```
+Alternatively, you can run the app on an emulator or simulator.
 
-In the output, you'll find options to open the app in a
+Approach
+Navigation
+The app uses @react-navigation/native for navigation. It includes a stack navigator for moving between different screens and a drawer navigator (though not fully implemented in this version).
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+State Management
+Local State: Used for managing component-specific state (e.g., form inputs, product filters).
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+AsyncStorage: Used for persisting the shopping cart data locally on the device.
 
-## Get a fresh project
+Data Fetching
+Products are fetched from the FakeStoreAPI using the fetch API. The data is then displayed in a list, and users can filter products by category or price.
 
-When you're ready, run:
+Cart Management
+Adding Products: Users can add products to the cart from the product list or product details page.
 
-```bash
-npm run reset-project
-```
+Removing Products: Users can remove products from the cart.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Clearing Cart: Users can clear the entire cart.
 
-## Learn more
+Payment Simulation
+The payment page simulates a payment process. It includes form inputs for card details and an amount field. Upon successful "payment," the user is redirected back to the cart page.
 
-To learn more about developing your project with Expo, look at the following resources:
+Styling
+The app uses React Native's StyleSheet for styling. The design is simple and responsive, ensuring a good user experience on both small and large screens.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Future Improvements
+   Implement user authentication.
+   
+   Add a backend for managing products and orders.
+   
+   Enhance the UI/UX with animations and better design elements.
+   
+   Integrate a real payment gateway.
